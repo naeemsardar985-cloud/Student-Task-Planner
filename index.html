@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Student Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+  <aside class="sidebar">
+    <h2 class="logo">Study Planner</h2>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#tasks">My Tasks</a>
+      <a href="#progress">My Progress</a>
+      <a href="#settings">Settings</a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Stay Focused!</p>
+      <small>Make every day productive.</small>
+    </div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Welcome back! Ready to study?</p>
+      </div>
+      <button id="themeToggle">Dark Mode</button>
+    </header>
+    <section class="stat-card">
+      <div class="stat-card">
+        <h3>Total Tasks</h3>
+        <h2 id="totalTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <h3>Completed Tasks</h3>
+        <h2 id="completedTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <h3>Pending Tasks</h3>
+        <h2 id="pendingTasks">0</h2>
+      </div>
+    </section>
+    <section class="task-section" id="tasks">
+      <div class="section-heading">
+        <h2>My Tasks</h2>
+        <p>Manage your daily study activities.</p>
+      </div>
+      <form id="taskForm">
+        <input type="text"
+        id="taskInput"
+        placeholder="Enter your task..."
+        required>
+        <select id="priority">
+          <option value="=Low">Low Priority</option>
+          <option value="Medium">Medium priority</option>
+          <option value="High">High Priority</option>
+        </select>
+        <input type="date" id="taskDate" required>
+        <button type="submit" id="submitBtn">
+          Add Task
+        </button>
+      </form>
+      <div class="task-control">
+        <input
+        type="search"
+        id="searchInput"
+        placeholder="Search tasks...">
+        <select id="filterTasks">
+          <option value="All">All Tasks</option>
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+      <div id="taskList">
+        <p class="empty-massage">
+          no task yet.Add your first task!
+        </p>
+      </div>
+    </section>
+    <section class="progress-section" id="progress">
+      <h2>Study Progress</h2>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+      <p id="progressText">0% Completed</p>
+    </section>
+    <footer>
+      <p>Student Task Planner 2026</p>
+    </footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
